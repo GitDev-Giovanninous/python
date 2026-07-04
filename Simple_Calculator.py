@@ -14,7 +14,6 @@ menu = {
     9: "Exit"
 }
 
-
 # FUNCTIONS
 def add(a,b):
     return a+b
