@@ -50,6 +50,13 @@ Features:
 - Multiplication
 - Division
 
+### 🔑 Password Generator
+A simple password generator with:
+- adjustable password size,
+- choice of characters to add,
+- ability to save passwords to a file on the desktop
+- and generate more passwords
+
 ---
 
 ## Technologies
