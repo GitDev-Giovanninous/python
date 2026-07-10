@@ -26,7 +26,7 @@ while True:
     print("\nWelcome to the Password Generator!")
     while True:
         try:
-            required_characters = int(input("Please enter a number of characters: "))
+            required_characters = int(input("Please enter a number of characters between 12 and 40: "))
             if required_characters < 12 or required_characters > 40:
                 print("Please enter a number between 12 and 40")
             else:
@@ -34,12 +34,12 @@ while True:
         except ValueError:
             print("Please enter a number")
 
-    want_numbers = (input("Do you want numbers?: ")).lower()
-    want_symbols = (input("Do you want symbols?: ")).lower()
+    want_numbers = (input("Do you want numbers? (yes/no): ")).lower()
+    want_symbols = (input("Do you want symbols? (yes/no): ")).lower()
     while want_numbers not in ("yes", "no") or want_symbols not in ("yes", "no"):
         print("Please enter yes or no")
-        want_numbers = (input("Do you want numbers?: ")).lower()
-        want_symbols = (input("Do you want symbols?: ")).lower()
+        want_numbers = (input("Do you want numbers? (yes/no): ")).lower()
+        want_symbols = (input("Do you want symbols? (yes/no): ")).lower()
 
     match (want_numbers, want_symbols):
         case ("yes", "yes"):
@@ -56,7 +56,8 @@ while True:
     password = generate_password(characters, required_characters)
     print(f"\nThe password I generate is: {password} ")
     while True:
-        save_password = input("Do you want to save your password in a file?: ").lower()
+        file_path = Path.home() / "Desktop" / "Password_generated.txt"
+        save_password = input(f"Do you want to save your password in `{file_path}`? (yes/no): ").lower()
 
         if save_password in ("yes", "no"):
             break
@@ -64,7 +65,6 @@ while True:
         print("Please enter yes or no")
 
     if save_password == "yes":
-        file_path = Path.home() / "Desktop" / "Password_generated.txt"
         with open(file_path, "a", encoding="utf-8") as file:
             file.write(password + "\n")
             print(f"Saved your password in {file_path}")
@@ -73,7 +73,7 @@ while True:
     else:
         print("Error")
 
-    wanna_another_password = input("Do you want another password?: ").lower()
+    wanna_another_password = input("Do you want another password? (yes/no): ").lower()
     if wanna_another_password == "yes":
         continue
     else:
