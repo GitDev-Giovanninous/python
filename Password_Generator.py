@@ -1,4 +1,7 @@
-
+"""Hi guys, this is my fourth project, and I'm very proud of it.
+I have been working on this project for a long time and finally I got it done.
+If you have any suggestions, let me know on Discord!
+Discord: giovanninous"""
 
 from pathlib import Path
 import secrets as se
