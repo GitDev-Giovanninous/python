@@ -19,15 +19,17 @@ def roll_dice():
     print(f"\nYou rolled {rolls} times, your previous rolls were {previous_rolls}")
 
     print("\nWelcome to the Virtual Dice!")
-    while True:
-        roll_dice()
+    
+while True:
+    
+    roll_dice()
 
+    wanna_continue = input("\nWould you like to continue? (yes/no) ").lower()
+
+    while wanna_continue not in ("yes", "no"):
+        print("Please enter yes or no.")
         wanna_continue = input("\nWould you like to continue? (yes/no) ").lower()
 
-        while wanna_continue not in ("yes", "no"):
-            print("Please enter yes or no.")
-            wanna_continue = input("\nWould you like to continue? (yes/no) ").lower()
-
-        if wanna_continue == "no":
-            print("\nThanks for coming!")
-            break
+    if wanna_continue == "no":
+        print("\nThanks for coming!")
+        break
