@@ -57,6 +57,10 @@ A simple password generator with:
 - ability to save passwords to a file on the desktop
 - and generate more passwords
 
+## 🎲 Virtual Dice
+- Rolls a dice
+- Save your previous rolls
+
 ---
 
 ## Technologies
