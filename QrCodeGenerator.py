@@ -1,3 +1,8 @@
+"""Qr code generator:
+- generate a qr code
+- choose the file name
+- Check the name of the site entered to see if it has https://www in the URL.""""
+
 import qrcode as qr
 from pathlib import Path
 
